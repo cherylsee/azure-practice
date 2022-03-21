@@ -1,13 +1,13 @@
-package com.ans.conquestserver;
+package com.ans.azurepractice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ConquestServerApplication {
+public class AzurePracticeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConquestServerApplication.class, args);
+		SpringApplication.run(AzurePracticeApplication.class, args);
 	}
 
 }

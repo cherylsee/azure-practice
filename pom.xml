@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ans</groupId>
-	<artifactId>conquest-server</artifactId>
+	<artifactId>azure-practice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>conquest-server</name>
+	<name>azure-practice</name>
 	<description>Practice project - Azure</description>
 	<properties>
 		<java.version>1.8</java.version>
