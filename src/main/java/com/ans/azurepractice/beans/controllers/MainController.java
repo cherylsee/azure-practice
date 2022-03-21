@@ -25,4 +25,10 @@ public class MainController {
         System.out.println("Root directory hit");
         return "redirect:/random.html";
     }
+
+    @GetMapping("/error")
+    public String getErrorMessage() {
+        System.out.println("Some error seems to have occurred!");
+        return "Error!";
+    }
 }
