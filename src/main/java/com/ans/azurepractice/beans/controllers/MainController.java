@@ -15,4 +15,9 @@ public class MainController {
     public String getUser() {
         return "This is a user";
     }
+
+    @GetMapping("/")
+    public String getIndex() {
+        return "This is the root directory.";
+    }
 }
