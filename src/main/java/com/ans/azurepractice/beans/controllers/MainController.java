@@ -1,14 +1,18 @@
 package com.ans.azurepractice.beans.controllers;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+import java.sql.SQLOutput;
+
+//@RestController
+@Controller
 public class MainController {
 
     @GetMapping("/random")
     public String getRandom() {
-        return "Random thing";
+        return "redirect:/resources/random.html";
     }
 
     @GetMapping("/user")
@@ -17,7 +21,8 @@ public class MainController {
     }
 
     @GetMapping("/")
-    public String getIndex() {
-        return "This is the root directory.";
+    public String getRoot() {
+        System.out.println("Root directory hit");
+        return "redirect:/random.html";
     }
 }

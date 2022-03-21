@@ -1,0 +1,287 @@
+.main-box {
+	margin: auto;
+}
+
+#haro-body {
+	position: relative;
+	border-radius: 50%;
+	border-width: 3px;
+	border-color: black;
+	border-style: solid;
+	width: 200px;
+	height: 200px;
+	background-color: #c1da86;
+	margin-bottom: 20px;
+	margin-left: 50px;
+}
+
+.bounce-animation {
+	animation-name: bounce;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}
+
+.roll-animation {
+	animation-name: roll;
+	animation-duration: 3s;
+	animation-iteration-count: 2;
+}
+
+@keyframes bounce {
+	0% {
+		margin-top: 150px;
+	}
+	10% {
+		margin-top: 150px;
+	}
+	50% {
+		margin-top: 50px;
+	}
+	90% {
+		margin-top: 150px;
+	}
+	100% {
+		margin-top: 150px;
+	}
+}
+
+@keyframes roll {
+	0% {
+		margin-top: 150px;
+		transform: rotation(0deg);
+	}
+	25% {
+		margin-top: 110px;
+		transform: rotation(45deg);
+	}
+	50% {
+		margin-top: 70px;
+		transform: rotation(90deg);
+	}
+	75% {
+		margin-top: 110px;
+		transform: rotation(135deg);
+	}
+	100% {
+		margin-top: 150px;
+		transform: rotation(180deg);
+	}
+}
+
+.eyes {
+	display: flex;
+	justify-content: space-between;
+	width: 50px;
+	margin-top: -15px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+@keyframes flash {
+	0% {
+		background-color: #9b2e2b;
+	}
+	50% {
+		background-color: red;
+	}
+	100% {
+		background-color: #9b2e2b;
+	}
+}
+
+.eye {
+	display: inline-block;
+	border: 1px solid black;
+	background-color: #9b2e2b;
+	width: 5px;
+	height: 15px;
+	border-radius: 50%;
+	animation-name: flash;
+	animation-duration: 0.7s;
+	animation-iteration-count: infinite;
+}
+
+#mouth-bump {
+	border: 1px solid black;
+	border-radius: 45%;
+	border-top-color: black;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	width: 80px;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#mouth-line-left {
+	border: 1px solid black;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-radius: 45%;
+	float: left;
+	width: 73px;
+	height: 12px;
+	position: relative;
+	left: -5px;
+	top: -3px;
+}
+
+#mouth-line-right {
+	border: 1px solid black;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-radius: 45%;
+	float: right;
+	width: 72px;
+	height: 12px;
+	position: relative;
+	left: 4px;
+	top: -34px;
+}
+
+.ears {
+	display: inline-block;
+}
+
+#ear-left-inner {
+	position: relative;
+	background-color: #9b2e2b;
+	width: 30px;
+	height: 50px;
+	border: solid 1px black;
+	border-radius: 50%;
+	transform: skew(-30deg, -35deg);
+	top: 17px;
+	left: -65px;
+	float: left;
+}
+
+#ear-left-flap {
+	position: relative;
+	background-color: #c1da86;
+	width: 80px;
+	height: 20px;
+	border: solid 1px black;
+	border-radius: 50%;
+	top: 5px;
+	left: -25px;
+	z-index: 10;
+	float: left;
+	animation-name: flap-left;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	transform-origin: top right;
+	transform: rotate(-0.05turn);
+}
+
+#ear-right-inner {
+	position: relative;
+	background-color: #9b2e2b;
+	width: 30px;
+	height: 50px;
+	border: solid 1px black;
+	border-radius: 50%;
+	transform: skew(30deg, 35deg);
+	top: -5px;
+	left: -17px;
+	float: right;
+}
+
+#ear-right-flap {
+	position: relative;
+	background-color: #c1da86;
+	width: 80px;
+	height: 20px;
+	border: solid 1px black;
+	border-radius: 50%;
+	top: 5px;
+	left: 25px;
+	z-index: 10;
+	float: right;
+	animation-name: flap-right;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	transform-origin: top left;
+	transform: rotate(0.05turn);
+}
+
+@keyframes flap-left {
+	0% {
+		transform: rotate(-0.05turn);
+	}
+	30% {
+		transform: rotate(-0.05turn);
+	}
+	35% {
+		transform: rotate(-0.03turn);
+	}
+	40% {
+		transform: rotate(0turn);
+	}
+	45% {
+		transform: rotate(0.03turn);
+	}
+	50% {
+		transform: rotate(0.05turn);
+	}
+	55% {
+		transform: rotate(0.03turn);
+	}
+	60% {
+		transform: rotate(0turn);
+	}
+	65% {
+		transform: rotate(-0.03turn);
+	}
+	70% {
+		transform: rotate(-0.05turn);
+	}
+	100% {
+		transform: rotate(-0.05turn);
+	}
+}
+
+@keyframes flap-right {
+	0% {
+		transform: rotate(0.05turn);
+	}
+	30% {
+		transform: rotate(0.05turn);
+	}
+	35% {
+		transform: rotate(0.03turn);
+	}
+	40% {
+		transform: rotate(0turn);
+	}
+	45% {
+		transform: rotate(-0.03turn);
+	}
+	50% {
+		transform: rotate(-0.05turn);
+	}
+	55% {
+		transform: rotate(-0.03turn);
+	}
+	60% {
+		transform: rotate(0turn);
+	}
+	65% {
+		transform: rotate(0.03turn);
+	}
+	70% {
+		transform: rotate(0.05turn);
+	}
+	100% {
+		transform: rotate(0.05turn);
+	}
+}
+
+#textbox {
+	font-face: "Arial";
+	height: 8px;
+}
